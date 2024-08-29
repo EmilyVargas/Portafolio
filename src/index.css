@@ -1,13 +1,97 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables CSS */
+
+:root {
+  /* Colors */
+  --firts-color: #4B6CC1;
+  --second-color: #FFFFFF;
+  --thrid-color: #132238;
+  --fourth-color: #333333;
+  --fifth-color: #F0F1F3;
+  --sixth-color: #EDD8FF;
+  --seveth-color: #2B384C;
+
+  /* Font and Typography */
+  --body-font: 'Work Sans', sans-serif;
+  --h1-font-size: 4.5rem; /*72px*/
+  --h2-font-size: 3rem; /*48px*/
+  --h3-font-size: 2.375rem; /*38px*/
+  --h4-font-size: 1.5rem; /*24px*/
+  --normal-font-size: 1.125rem;/*18px*/
+  --small-font-size: 1rem;/*16px*/
+  --smaller-font-size: 0.875rem;/*14px*/
+
+  /* Font Weight */
+  --font-medium: 400;
+  --font-semiblod: 600;
+
+  /* Border Radius */
+  --border-radius: 4px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,button,input,textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+h1 {
+  color: var(--second-color);
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semiblod);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semiblod);
+}
+
+h3 {
+  color: var(--thrid-color);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semiblod);
+}
+
+h4 {
+  color: var(--thrid-color);
+  font-size: var(--h4-font-size);
+  font-weight: var(--font-semiblod);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Reusable CSS */
+
+.container {
+  max-width: 1080px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding-top: 7rem;
+  padding-bottom: 2rem;
 }

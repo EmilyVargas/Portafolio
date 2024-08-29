@@ -1,0 +1,130 @@
+.intro {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('../resources/Fondo-Homenew.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 80vh; 
+}
+
+.i-left {
+  display: flex;
+  flex-direction: column; 
+  align-items:first baseline; 
+  justify-content: center;
+  width: 40%; 
+}
+
+.i-left {
+  margin-bottom: 10rem;
+  margin-left: 10rem;
+}
+
+.i-right {
+  display: flex;
+  flex-direction: column; 
+  align-items:center; 
+  justify-content: center; 
+  width: 40%;
+}
+
+.i-redes {
+  margin-top: 1rem;
+  display: flex;
+  align-items:center; 
+  justify-content: center; 
+  background-color: var(--second-color);
+  border-radius: 4px;
+  width: 130px;
+  height: 50px;
+}
+
+.btn-facebook {
+  color: var(--firts-color);
+  background-color: var(--second-color);
+  cursor: pointer;
+  border: none;
+  padding: 0 20px 0 0;
+  font-size: 1rem;
+}
+
+.btn-github {
+  color: var(--firts-color);
+  background-color: var(--second-color);
+  cursor: pointer;
+  border: none;
+  padding: 0 20px 0 0;
+  font-size: 1rem;
+}
+
+.btn-linkedin {
+  color: var(--firts-color);
+  background-color: var(--second-color);
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-linkedin:hover {
+  color: var(--sixth-color);
+  background-color: var(--second-color);
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-github:hover {
+  color: var(--sixth-color);
+  background-color: var(--second-color);
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-facebook:hover {
+  color: var(--sixth-color);
+  background-color: var(--second-color);
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.foto {
+  width: auto;
+  height: 530px;
+}
+
+.p-intro {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    color: var(--second-color);
+    font-size: var(--normal-font-size);
+}
+
+.btn-CV {
+    background-color: var(--second-color);
+    cursor: pointer;
+    border: 1px solid var(--firts-color);
+    border-radius: 4px;
+    line-height: 2.5;
+    padding: 0 20px;
+    color: var(--firts-color);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+.btn-CV:hover {
+    background-color: var(--firts-color);
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    line-height: 2.5;
+    padding: 0 20px;
+    color: var(--second-color);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+ 
