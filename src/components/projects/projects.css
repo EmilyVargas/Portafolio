@@ -1,0 +1,30 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: var(--second-color);
+    height: 77vh; 
+}
+
+.project-container-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 28vh;
+}
+.title-project {
+    color: var(--thrid-color);
+}
+.p-project {
+    margin-top: 3rem;
+    font-size: var(--normal-font-size);
+    color: #87909D;
+}
+
+.project-container-down {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}

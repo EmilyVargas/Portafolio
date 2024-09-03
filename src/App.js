@@ -12,7 +12,7 @@ const App = () => {
     <Home />
     <Resume />
     <Projects />
-    <Contact></Contact>
+    <Contact />
     </>
   )
 }
