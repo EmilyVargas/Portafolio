@@ -4,6 +4,7 @@ import Contact from './components/contact/Contact.jsx';
 import Home from '../src/components/home/Home.jsx';
 import Nav from './components/nav/Nav.jsx';
 import Projects from './components/projects/Projects.jsx';
+import Footer from './components/footer/Footer.jsx';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
     <Resume />
     <Projects />
     <Contact />
+    <Footer />
     </>
   )
 }

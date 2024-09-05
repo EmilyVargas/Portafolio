@@ -1,0 +1,44 @@
+.f-wrapper{
+    background-color: var(--seveth-color);
+    display: flex;
+    align-items: center;
+    height:300px ;
+}
+
+.f-left {
+    margin-top: 5rem;
+    margin-left: 650px;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    gap: 1rem;
+  }
+  .f-name {
+    color: var(--second-color);
+    font-size: 2rem;
+    font-weight:600;
+  }
+  .f-right {
+    margin-top: 5rem;
+    margin-right:650px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-weight: 500;
+  }
+
+  .f-list {
+    flex: 10;
+  }
+
+  .f-list > ul {
+    color: var(--second-color);
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .f-list > ul :hover {
+    color: var(--firts-color);
+    cursor: pointer;
+  }

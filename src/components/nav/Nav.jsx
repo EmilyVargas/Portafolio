@@ -23,7 +23,6 @@ const Nav = () => {
           Contacto
         </button>
       </div>
-
     </div>
   )
 };
