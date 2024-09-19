@@ -3,8 +3,8 @@ import Resume from '../src/components/resume/Resume.jsx';
 import Contact from './components/contact/Contact.jsx';
 import Home from '../src/components/home/Home.jsx';
 import Nav from './components/nav/Nav.jsx';
-import Projects from './components/projects/Projects.jsx';
 import Footer from './components/footer/Footer.jsx';
+import ProjectsFilter from './components/projects-filter/ProjectsFilter.jsx';
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
     <Nav />
     <Home />
     <Resume />
-    <Projects />
+    <ProjectsFilter />
     <Contact />
     <Footer />
     </>
