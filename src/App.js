@@ -1,22 +1,19 @@
 import React from 'react';
-import Resume from '../src/components/resume/Resume.jsx';
-import Contact from './components/contact/Contact.jsx';
-import Home from '../src/components/home/Home.jsx';
-import Nav from './components/nav/Nav.jsx';
-import Footer from './components/footer/Footer.jsx';
-import ProjectsFilter from './components/projects-filter/ProjectsFilter.jsx';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import PageIndex from './components/pages/PageIndex.jsx';
+import PageUx from './components/pages/PageUx.jsx';
+import PageWeb from './components/pages/PageWeb.jsx';
 
 const App = () => {
   return (
-    <>
-    <Nav />
-    <Home />
-    <Resume />
-    <ProjectsFilter />
-    <Contact />
-    <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<PageIndex />} />
+        <Route path='/pageux' element={<PageUx />} />
+        <Route path='/pageweb' element={<PageWeb />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App
+export default App;

@@ -3,6 +3,7 @@ import './ProjectsFilter.css';
 import Menu from './Menu';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
+import {useNavigate } from 'react-router-dom';
 
 const ProjectsFilter = () => {
     const [items, setItems] = useState(Menu);
@@ -14,6 +15,8 @@ const ProjectsFilter = () => {
     }
     const [selectedCategory, setSelectedCategory] = useState('Todos');
 
+    const navigate=useNavigate();
+
     return (
         <section className='work container section' id='work'>
             <h2 className='title-project'>Proyectos</h2>
@@ -24,9 +27,9 @@ const ProjectsFilter = () => {
                     onClick={() => { setItems(Menu); setSelectedCategory('Todos'); }}
                 >Todos</span>
                 <span
-                    className={`work-item ${selectedCategory === 'Front-end' ? 'selected' : ''}`}
-                    onClick={() => { filterItem('Front-end'); setSelectedCategory('Front-end'); }}
-                >Front-End</span>
+                    className={`work-item ${selectedCategory === 'Frontend' ? 'selected' : ''}`}
+                    onClick={() => { filterItem('Frontend'); setSelectedCategory('Frontend'); }}
+                >FrontEnd</span>
                 <span
                     className={`work-item ${selectedCategory === 'UX' ? 'selected' : ''}`}
                     onClick={() => { filterItem('UX'); setSelectedCategory('UX'); }}
@@ -52,7 +55,7 @@ const ProjectsFilter = () => {
                                 <div className="card-description">
                                     {description}
                                 </div>
-                                <button className='card-button'>Mas informacion <FontAwesomeIcon icon={faArrowRight}/></button>
+                                <button className='card-button' onClick={()=>{const path=category=='UX'?'/pageux':'/pageweb'; navigate(path, {id:id});}}>Mas informacion <FontAwesomeIcon icon={faArrowRight}/></button>
                             </div>
                         </div>
                     )

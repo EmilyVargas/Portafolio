@@ -5,12 +5,12 @@ const Menu = [
         workstation:'Frontend Desing',
         title:'C&B Trading',
         description:'Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente',
-        category: 'Front-end',
+        category: 'Frontend',
     },
     {
         id : 2, 
         image:'https://hireline.io/blog/wp-content/uploads/2022/07/habilidades-de-un-programador-1200x900.jpg',
-        workstation:'Frontend Desing',
+        workstation:'Ux Desing',
         title:'C&B Trading',
         description:'Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente',
         category: 'UX',
@@ -21,12 +21,12 @@ const Menu = [
         workstation:'Frontend Desing',
         title:'C&B Trading',
         description:'Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente',
-        category: 'Front-end',
+        category: 'Frontend',
     },
     {
         id : 4, 
         image:'https://hireline.io/blog/wp-content/uploads/2022/07/habilidades-de-un-programador-1200x900.jpg',
-        workstation:'Frontend Desing',
+        workstation:'Ux Desing',
         title:'C&B Trading',
         description:'Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente',
         category: 'UX',
@@ -37,7 +37,7 @@ const Menu = [
         workstation:'Frontend Desing',
         title:'C&B Trading',
         description:'Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente Se rediseño toda la pagina web a pedido del cliente',
-        category: 'Front-end',
+        category: 'Frontend',
     },
 ];
 
