@@ -1,0 +1,35 @@
+.container-web {
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 62px;
+}
+
+.titleweb-plantilla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-OneColumn-web {
+    margin-top: 55px;
+    padding-bottom: 6rem;
+}
+
+.container-TwoColumn-web {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 330px;
+    padding-bottom: 6rem;
+
+}
+
+.container-TwoColumnImage-web {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 199px;
+    padding-bottom: 5rem;
+}
+
+.margin-top {
+    margin-top: 2rem;
+}

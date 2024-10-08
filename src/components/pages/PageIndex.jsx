@@ -17,6 +17,6 @@ const PageIndex = () => {
     <Footer />
     </>
   )
-}
+};
 
 export default PageIndex;

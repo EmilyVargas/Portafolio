@@ -1,0 +1,30 @@
+.container-ux{
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 62px;
+}
+
+.titleux-plantilla{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-OneColumn-ux{
+    margin-top: 55px;
+    padding-bottom: 6rem;
+}
+
+.container-TwoColumn-ux{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 330px;
+    padding-bottom: 6rem;
+}
+
+.container-TwoColumnImage-ux {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 199px;
+    padding-bottom: 5rem;
+}
