@@ -8,10 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 55px;
 }
 
 .container-OneColumn-ux{
-    margin-top: 55px;
     padding-bottom: 6rem;
 }
 

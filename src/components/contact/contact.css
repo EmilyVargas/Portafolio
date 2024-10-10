@@ -9,7 +9,7 @@
 .card-contact{
     display: flex;
     justify-content: space-between;
-    margin-top: 15rem;
+    margin-top: 10rem;
     padding-top: 1rem;
     padding-bottom: 7rem;
     align-items:center; 
@@ -18,7 +18,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     width: 1320px;
-    height: 600px;
+    height: 700px;
 }
 
 .title-1{
