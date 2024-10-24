@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "detalle_uxes",
+  "info": {
+    "singularName": "detalle-ux",
+    "pluralName": "detalle-uxes",
+    "displayName": "detalle ux",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "challenge": {
+      "type": "text"
+    },
+    "solution": {
+      "type": "text"
+    },
+    "personalcontributions": {
+      "type": "text"
+    },
+    "methodologiesandtechnologies": {
+      "type": "text"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "finalresults": {
+      "type": "text"
+    },
+    "imageux1": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "imageux2": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "proyecto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::proyecto.proyecto",
+      "mappedBy": "detalle_ux"
+    }
+  }
+}

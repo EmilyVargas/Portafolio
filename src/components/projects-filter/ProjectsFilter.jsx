@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './ProjectsFilter.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
-import {useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const ProjectsFilter = () => {
 
     const [proyectos, setProyectos] = useState([]);
     const [originalProyectos, setOriginalProyectos] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('Todos');
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchProyectos = async () => {
@@ -18,18 +18,17 @@ const ProjectsFilter = () => {
                 const response = await axios.get('http://localhost:1337/api/proyectos?populate=*');
                 setProyectos(response.data.data);
                 setOriginalProyectos(response.data.data);
-            }catch(error){
+            } catch (error) {
                 console.error('Error fetching projects', error);
             }
         };
         fetchProyectos();
     }, []);
 
-    
-    // Función para filtrar los proyectos según la categoría
+
     const filterProy = (categoryItem) => {
         if (categoryItem === 'Todos') {
-            setProyectos(originalProyectos); // Mostrar todos los proyectos
+            setProyectos(originalProyectos);
         } else {
             const updatedItems = originalProyectos.filter((curElem) => {
                 return curElem.category === categoryItem;
@@ -60,10 +59,10 @@ const ProjectsFilter = () => {
 
             <div className="work-container grid">
                 {proyectos.map((elem) => {
-                    const {id, workstation, title, summary, category, image } = elem;
+                    const { id, workstation, title, summary, category, image } = elem;
                     const imageUrl = image && image.length > 0 && image[0].url
-          ? `http://localhost:1337${image[0].url}` // Accede al primer elemento del array
-          : 'URL_POR_DEFECTO'; // Usa una URL por defecto si no hay imagen
+                        ? `http://localhost:1337${image[0].url}`
+                        : 'URL_POR_DEFECTO';
                     return (
                         <div className="card-container" key={id}>
                             <div className="image-container">
@@ -80,7 +79,15 @@ const ProjectsFilter = () => {
                                 <div className="card-description">
                                     {summary}
                                 </div>
-                                <button className='card-button' onClick={()=>{const path=category=='UX'?'/pageux':'/pageweb'; navigate(path, {id:id});}}>Mas informacion <FontAwesomeIcon icon={faArrowRight}/></button>
+                                <button
+                                    className='card-button'
+                                    onClick={() => {
+                                        const path = category === 'UX' ? '/pageux/' : '/pageweb/';
+                                        navigate(path + id);
+                                    }}
+                                >
+                                    Más información <FontAwesomeIcon icon={faArrowRight} />
+                                </button>
                             </div>
                         </div>
                     )

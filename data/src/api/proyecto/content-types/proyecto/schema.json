@@ -4,8 +4,7 @@
   "info": {
     "singularName": "proyecto",
     "pluralName": "proyectos",
-    "displayName": "proyecto",
-    "description": ""
+    "displayName": "proyecto"
   },
   "options": {
     "draftAndPublish": true
@@ -37,6 +36,18 @@
       ],
       "type": "media",
       "multiple": true
+    },
+    "detalle_ux": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::detalle-ux.detalle-ux",
+      "inversedBy": "proyecto"
+    },
+    "detalle_web": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::detalle-web.detalle-web",
+      "inversedBy": "proyecto"
     }
   }
 }

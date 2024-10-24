@@ -1,40 +1,5 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
-export interface ApiProyectoProyecto extends Struct.CollectionTypeSchema {
-  collectionName: 'proyectos';
-  info: {
-    singularName: 'proyecto';
-    pluralName: 'proyectos';
-    displayName: 'proyecto';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Schema.Attribute.String;
-    category: Schema.Attribute.Enumeration<['Frontend', 'UX']>;
-    workstation: Schema.Attribute.String;
-    summary: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    createdAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    publishedAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::proyecto.proyecto'
-    >;
-  };
-}
-
 export interface PluginUploadFile extends Struct.CollectionTypeSchema {
   collectionName: 'files';
   info: {
@@ -520,6 +485,132 @@ export interface PluginUsersPermissionsUser
   };
 }
 
+export interface ApiDetalleUxDetalleUx extends Struct.CollectionTypeSchema {
+  collectionName: 'detalle_uxes';
+  info: {
+    singularName: 'detalle-ux';
+    pluralName: 'detalle-uxes';
+    displayName: 'detalle ux';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    challenge: Schema.Attribute.Text;
+    solution: Schema.Attribute.Text;
+    personalcontributions: Schema.Attribute.Text;
+    methodologiesandtechnologies: Schema.Attribute.Text;
+    summary: Schema.Attribute.Text;
+    finalresults: Schema.Attribute.Text;
+    imageux1: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    imageux2: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    proyecto: Schema.Attribute.Relation<'oneToOne', 'api::proyecto.proyecto'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::detalle-ux.detalle-ux'
+    >;
+  };
+}
+
+export interface ApiDetalleWebDetalleWeb extends Struct.CollectionTypeSchema {
+  collectionName: 'detalle_webs';
+  info: {
+    singularName: 'detalle-web';
+    pluralName: 'detalle-webs';
+    displayName: 'detalle web';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    characteristics: Schema.Attribute.Text;
+    objectives: Schema.Attribute.Text;
+    challengeandsolutions: Schema.Attribute.Text;
+    sourcecode: Schema.Attribute.Text;
+    technologiesused: Schema.Attribute.Text;
+    personalcontributions: Schema.Attribute.Text;
+    lessonslearned: Schema.Attribute.Text;
+    imageweb: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    proyecto: Schema.Attribute.Relation<'oneToOne', 'api::proyecto.proyecto'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::detalle-web.detalle-web'
+    >;
+  };
+}
+
+export interface ApiProyectoProyecto extends Struct.CollectionTypeSchema {
+  collectionName: 'proyectos';
+  info: {
+    singularName: 'proyecto';
+    pluralName: 'proyectos';
+    displayName: 'proyecto';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    category: Schema.Attribute.Enumeration<['Frontend', 'UX']>;
+    workstation: Schema.Attribute.String;
+    summary: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    detalle_ux: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::detalle-ux.detalle-ux'
+    >;
+    detalle_web: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::detalle-web.detalle-web'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::proyecto.proyecto'
+    >;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -885,7 +976,6 @@ export interface AdminTransferTokenPermission
 declare module '@strapi/strapi' {
   export module Public {
     export interface ContentTypeSchemas {
-      'api::proyecto.proyecto': ApiProyectoProyecto;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
@@ -896,6 +986,9 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::detalle-ux.detalle-ux': ApiDetalleUxDetalleUx;
+      'api::detalle-web.detalle-web': ApiDetalleWebDetalleWeb;
+      'api::proyecto.proyecto': ApiProyectoProyecto;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;

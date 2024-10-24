@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "detalle_webs",
+  "info": {
+    "singularName": "detalle-web",
+    "pluralName": "detalle-webs",
+    "displayName": "detalle web"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "characteristics": {
+      "type": "text"
+    },
+    "objectives": {
+      "type": "text"
+    },
+    "challengeandsolutions": {
+      "type": "text"
+    },
+    "sourcecode": {
+      "type": "text"
+    },
+    "technologiesused": {
+      "type": "text"
+    },
+    "personalcontributions": {
+      "type": "text"
+    },
+    "lessonslearned": {
+      "type": "text"
+    },
+    "imageweb": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "proyecto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::proyecto.proyecto",
+      "mappedBy": "detalle_web"
+    }
+  }
+}
